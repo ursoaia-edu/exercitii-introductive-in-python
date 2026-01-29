@@ -58,13 +58,81 @@ print(f'Media numerelor {a}, {b} si {c} este {media}')
 
 a = [-1, -12, -10]
 
-valoarea_maxima = -9999999
+valoarea_maxima = None
 
 for i in a:
-    if valoarea_maxima < i:
+    if valoarea_maxima == None:
+        valoarea_maxima = i
+    elif valoarea_maxima < i:
         valoarea_maxima = i
 
 print(valoarea_maxima)
+
+'''Scrie un program care calculează suma 
+valorilor pare dintr-o listă.'''
+
+lista = []
+
+while True:
+    element = input('Introdu un element: ')
+    if element == 'x':
+        break
+    lista.append(int(element))
+    
+suma = 0
+
+for i in lista:
+    if i % 2 == 0:
+        suma = suma + i
+
+print(f'Suma elementelor pare este: {suma}')
+
+
+'''Creează o listă cu 10 numere și 
+afișează doar cele mai mari decât 5'''
+
+lista = []
+
+while True:
+    element = input('Introdu un element: ')
+    if len(lista) == 10:
+        break
+    lista.append(int(element))
+
+elemente_mai_mari_ca_5 = []
+
+for i in lista:
+    if i > 5:
+        elemente_mai_mari_ca_5.append(i)
+
+print(f'Lista initiala: {lista}')
+print(f'Lista finala: {elemente_mai_mari_ca_5}')
+
+
+'''Folosește o expresie condițională pentru a decide 
+dacă un elev a promovat.'''
+
+nota = int(input('Introdu nota elevului: '))
+
+if nota < 0 or nota > 10:
+    print('Eroare')
+else:
+    if nota >= 5:
+        print('Elevul este promovat')
+    else:
+        print('Elevul nu este promovat')
+
+
+'''Creează un program care calculează vârsta pe 
+baza anului de naștere.'''
+
+anul_curent = 2026
+
+anul_nasterii = int(input('Introdu anul nasterii: '))
+
+virsta = anul_curent - anul_nasterii
+
+print(f'Virsta este: {virsta}')
 
 
 
